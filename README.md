@@ -36,7 +36,7 @@ Only one of Rules 1–3 is applied per product. Rule 4 is always applied afterwa
 
 ## Output
 
-- `updated_prices.csv`: Contains `sku`, `old_price`, and `new_price` with `$` units
+- `result_prices.csv`: Contains `sku`, `old_price`, and `new_price` with `$` units
 
 ## Run Instructions
 
