@@ -33,7 +33,7 @@ Only one of Rules 1–3 is applied per product. Rule 4 is always applied afterwa
 
 - `products.csv`: SKU, product name, current price, cost price, stock
 - `sales.csv`: SKU, quantity sold in past 30 days
-  (Note : Make sure that you have both the files in same directory as python code)
+  **(Note : Make sure that you have both the files in same directory as python code)**
 
 ## Output
 
