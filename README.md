@@ -4,6 +4,22 @@
 
 This script adjusts product prices based on inventory and sales performance. It uses business rules with defined priorities and enforces a minimum profit margin of 20%.
 
+## The Code Logic
+
+1. We use pandas to read `products.csv` and `sales.csv` into DataFrames.
+2. `merged_df` combines both datasets on `sku` so we can access all info per product.
+3. Missing sales data (NaN) is filled with 0 to avoid calculation errors.
+4. We use `.apply()` on `merged_df` with a custom function to process each row.
+5. Inside the function, we apply pricing rules in order of priority.
+6. Only the first matching rule among Rule 1–3 is applied.
+7. Rule 4 ensures the final price gives at least 20% profit margin.
+8. We round the final computed price to 2 decimal places using `round()`.
+9. We use `lambda` functions to format prices with a dollar sign (`$`).
+10. `lambda` is a quick way to define simple inline formatting functions.
+11. Only the necessary columns (`sku`, `old_price`, `new_price`) are selected.
+12. Finally, we write the result to `result_prices.csv` using `to_csv()`.
+
+
 ## Pricing Logic
 
 1. **Rule 1 – Low Stock, High Demand**: +15%
